@@ -82,7 +82,7 @@ keyed_groups:
 
 from ansible.errors import AnsibleError
 from ansible.plugins.inventory import BaseInventoryPlugin, Constructable
-from pathlib import Path
+import os
 from pypureclient import pure1
 
 
@@ -236,7 +236,7 @@ class InventoryModule(BaseInventoryPlugin, Constructable):
         self._read_config_data(path)
 
         app_id = self.get_option('app_id')
-        private_key_file = Path(self.get_option('private_key_file')).expanduser()
+        private_key_file = os.path.expanduser(self.get_option('private_key_file'))
         private_key_password = self.get_option('private_key_password')
 
         pure1Client = pure1.Client(app_id=app_id,
