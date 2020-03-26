@@ -1,0 +1,10 @@
+---
+plugin: purestorage.pure1.pure1
+app_id: pure1:apikey:<redacted>
+private_key_file: ~/github/pure1-api-integrations/pure1_test_key.txt
+keyed_groups:
+  - prefix: pure_mod
+    key: pure_model
+  - prefix: tag
+    key: tags
+    

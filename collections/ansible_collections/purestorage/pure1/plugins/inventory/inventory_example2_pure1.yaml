@@ -1,0 +1,9 @@
+---
+plugin: purestorage.pure1.pure1
+app_id: pure1:apikey:<redacted>
+private_key_file: ~/github/pure1-api-integrations/pure1_test_key.txt
+array_filter: contains(name, 'sn1-405')
+tag_filter:
+  tag_name: Department
+  value: Finance
+    
